@@ -5,11 +5,11 @@
 class AwsRemote < Formula
   desc ""
   homepage "https://github.com/ronenniv/aws-remote"
-  version "0.0.1-alpha"
+  version "0.0.1"
 
   on_macos do
-    url "https://github.com/ronenniv/aws-remote/releases/download/v0.0.1-alpha/aws-remote_0.0.1-alpha_darwin_all.tar.gz"
-    sha256 "ddc9189f83a6cb1974ef0fe38106c396d060798f5e145e307671793271c35573"
+    url "https://github.com/ronenniv/aws-remote/releases/download/v0.0.1/aws-remote_0.0.1_darwin_all.tar.gz"
+    sha256 "22d066a08a64162d487fc49ebf596745d8fffea36402fee80d98f77fd2eb2a99"
 
     def install
       bin.install "aws-remote"
@@ -18,16 +18,16 @@ class AwsRemote < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ronenniv/aws-remote/releases/download/v0.0.1-alpha/aws-remote_0.0.1-alpha_linux_arm64.tar.gz"
-      sha256 "7e26e96729c9ce6135afa1fca1901c84d70bf55144ae7b75b2bfc7dd609e6866"
+      url "https://github.com/ronenniv/aws-remote/releases/download/v0.0.1/aws-remote_0.0.1_linux_arm64.tar.gz"
+      sha256 "d7377a8595f7a770d2bbed57a6511b63181639c9f05d23e9fea5f5ac1dcfa381"
 
       def install
         bin.install "aws-remote"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ronenniv/aws-remote/releases/download/v0.0.1-alpha/aws-remote_0.0.1-alpha_linux_amd64.tar.gz"
-      sha256 "641c1ee7f13fe1d249f427a4eb7dedbfb7113702f5bc71d116057226e6c9f747"
+      url "https://github.com/ronenniv/aws-remote/releases/download/v0.0.1/aws-remote_0.0.1_linux_amd64.tar.gz"
+      sha256 "737eb89bf494ea22c7395d546ef61699c85f91dbf138112c195da6cbfdfc1aed"
 
       def install
         bin.install "aws-remote"
